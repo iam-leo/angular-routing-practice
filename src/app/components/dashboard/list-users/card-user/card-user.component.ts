@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-card-user',
   templateUrl: './card-user.component.html',
   styleUrls: ['./card-user.component.css']
 })
-export class CardUserComponent {
-  imageUrl = 'https://pixabay.com/get/ga1badf630bdecc0a7db0e5e8640695c4af3bd2e70ec0515214646b52c6abdf7d25b11f33788a7de7268d859f1ffb530a4a9fdf0a27c094bb03824c514b4b4bf7_1280.png'
+export class CardUserComponent implements OnInit {
+  @Input() user: any;
+  name: string = '';
+  email: string = '';
+  imageUrl = 'https://pixabay.com/get/g4988ac51802c4b8d0a3877f1d621898e369d66f8ba20a353240e6ca4ea6489a1b124b2dd7d9ee70249238e42e88ea710_1280.png';
+
+  ngOnInit(): void {
+    this.name = this.user.name
+    this.email = this.user.email
+  }
 }
