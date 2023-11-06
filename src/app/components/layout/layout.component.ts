@@ -26,7 +26,7 @@ export class LayoutComponent {
   particlesOptions = {
     background: {
       color: {
-        value: "#222",
+        value: "#020617",
       },
     },
     fpsLimit: 60,
