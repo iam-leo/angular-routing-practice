@@ -7,7 +7,8 @@ import { UsersService } from 'src/app/services/users.service';
   styleUrls: ['./list-users.component.css']
 })
 export class ListUsersComponent implements OnInit{
-  usersList: any[] = []
+  usersList: any[] = [];
+  loading = true;
 
   constructor(private _usersService: UsersService) { }
 
@@ -18,6 +19,7 @@ export class ListUsersComponent implements OnInit{
   getUsers(){
     this._usersService.getUsers().subscribe(data => {
       this.usersList = data;
+      this.loading = false;
     })
   }
 }
