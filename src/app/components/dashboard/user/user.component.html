@@ -1,1 +1,28 @@
-<p>user works!</p>
+<div class="flex items-center justify-center mt-28 mb-40 max-w-[1200px] mx-auto gap-x-5 border border-lime-600 p-10">
+    <div>
+        <img [src]="imageUrl" alt="" class="w-72">
+    </div>
+    <div class="flex flex-col items-center justify-center p-5 gap-y-4">
+        <div class="flex items-center w-full gap-x-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><g fill="#bef264"><path d="M224 128a95.76 95.76 0 0 1-31.8 71.37A72 72 0 0 0 128 160a40 40 0 1 0-40-40a40 40 0 0 0 40 40a72 72 0 0 0-64.2 39.37A96 96 0 1 1 224 128Z" opacity=".2"/><path d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24ZM74.08 197.5a64 64 0 0 1 107.84 0a87.83 87.83 0 0 1-107.84 0ZM96 120a32 32 0 1 1 32 32a32 32 0 0 1-32-32Zm97.76 66.41a79.66 79.66 0 0 0-36.06-28.75a48 48 0 1 0-59.4 0a79.66 79.66 0 0 0-36.06 28.75a88 88 0 1 1 131.52 0Z"/></g></svg>
+            <p class="text-3xl uppercase text-lime-300">{{ name }}</p>
+        </div>
+        <div class="flex items-center w-full gap-x-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="#bef264" d="M19.58 3H15V1h8v8h-2V4.41l-4.83 4.83A5 5 0 0 1 13 16.9V19h2v2h-2v2h-2v-2H9v-2h2v-2.1a5 5 0 0 1-3.18-7.64L6.64 8.07l-1.4 1.39l-1.41-1.42l1.4-1.39L3 4.42V8H1V1h7v2H4.41l2.23 2.24l1.44-1.43L9.5 5.23L8.06 6.66l1.17 1.18C10 7.31 11 7 12 7s1.96.3 2.75.83L19.58 3M12 9a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z"/></svg>
+            <p class="text-2xl uppercase text-lime-300">{{ gender }}</p>
+        </div>
+        <div class="flex items-center w-full gap-x-4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="#bef264" d="M12 22q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12v1.45q0 1.475-1.012 2.513T18.5 17q-.875 0-1.65-.375t-1.3-1.075q-.725.725-1.638 1.088T12 17q-2.075 0-3.538-1.463T7 12q0-2.075 1.463-3.538T12 7q2.075 0 3.538 1.463T17 12v1.45q0 .65.425 1.1T18.5 15q.65 0 1.075-.45t.425-1.1V12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20h5v2h-5Zm0-7q1.25 0 2.125-.875T15 12q0-1.25-.875-2.125T12 9q-1.25 0-2.125.875T9 12q0 1.25.875 2.125T12 15Z"/></svg>
+            <p class="text-2xl uppercase text-lime-300">{{ email }}</p>
+        </div>
+        <div class="flex items-center w-full gap-x-4">
+            <svg *ngIf="status === 'active'" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 2048 2048"><path fill="#bef264" d="m1453 941l-621 621l-365-365l90-90l275 275l531-531l90 90z"/></svg>
+            <svg *ngIf="status === 'inactive'" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 2048 2048"><path fill="#bef264" d="m1050 1088l371 371l-90 90l-371-371l-371 371l-90-90l371-371l-371-371l90-90l371 371l371-371l90 90l-371 371z"/></svg>
+            <p class="text-2xl uppercase text-lime-300">{{ status }}</p>
+        </div>
+        <button
+            routerLink="/dashboard"
+            class="block px-10 py-2 mt-3 tracking-wider text-white uppercase border rounded-lg shadow-md border-lime-300 shadow-lime-900"
+        >Back</button>
+    </div>
+</div>
