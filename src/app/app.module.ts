@@ -9,6 +9,7 @@ import { FooterComponent } from './components/dashboard/footer/footer.component'
 import { NavbarComponent } from './components/dashboard/navbar/navbar.component';
 import { ListUsersComponent } from './components/dashboard/list-users/list-users.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { CardUserComponent } from './components/dashboard/list-users/card-user/card-user.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LayoutComponent } from './components/layout/layout.component';
     FooterComponent,
     NavbarComponent,
     ListUsersComponent,
-    LayoutComponent
+    LayoutComponent,
+    CardUserComponent,
   ],
   imports: [
     BrowserModule,
