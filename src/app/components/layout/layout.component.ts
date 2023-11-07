@@ -94,7 +94,7 @@ export class LayoutComponent {
   };
 
   particlesLoaded(container: Container): void {
-    console.log(container);
+    
   }
 
   async particlesInit(engine: Engine): Promise<void> {
