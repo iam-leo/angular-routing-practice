@@ -14,6 +14,7 @@ export class UserComponent implements OnInit {
   gender: string = '';
   status: string = '';
   imageUrl = 'https://pixabay.com/get/g4988ac51802c4b8d0a3877f1d621898e369d66f8ba20a353240e6ca4ea6489a1b124b2dd7d9ee70249238e42e88ea710_1280.png';
+  loading = true;
 
   constructor( private actRoute: ActivatedRoute, private _usersService: UsersService) {
     this.id = +this.actRoute.snapshot.params['id'];
@@ -29,6 +30,7 @@ export class UserComponent implements OnInit {
       this.email = data.email;
       this.gender = data.gender;
       this.status = data.status;
+      this.loading = false;
     })
    }
 

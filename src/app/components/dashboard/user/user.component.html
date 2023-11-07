@@ -1,4 +1,14 @@
-<div class="flex items-center justify-center mt-28 mb-40 max-w-[1200px] mx-auto gap-x-5 border border-lime-600 p-10">
+<div
+    *ngIf="loading"
+    class="flex items-center justify-center w-full h-screen"
+>
+    <div class="loader"></div>
+</div>
+
+<div
+    *ngIf="loading === false"
+    class="flex items-center justify-center mt-28 mb-40 max-w-[1200px] mx-auto gap-x-5 border border-lime-600 p-10"
+>
     <div>
         <img [src]="imageUrl" alt="" class="w-72">
     </div>
